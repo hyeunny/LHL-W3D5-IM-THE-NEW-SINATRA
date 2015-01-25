@@ -27,6 +27,6 @@ end
 
 get '/messages/:id' do
   @message = Message.find params[:id]
-  @messages = Message.where(author: @message.author)
+  @messages = Message.where("author = '#{@message.author}' AND id != #{@message.id}")
   erb :'messages/show'
 end

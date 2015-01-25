@@ -1,5 +1,6 @@
 <h1>I'M THE NEW SINATRA</h1>
 <a href="/messages/new">Post a message... It's FREE (for now)!</a>
+<hr/>
 <% @messages.each do |message| %>
   <div class="message">
     <h3><a href="/messages/<%= message.id %>"><small>(Author: <%= message.author %>)</small></h3></a>

@@ -12,14 +12,17 @@
 <form method="POST" action="/messages">
   <div>
     <label>Author:</label>
+    <br>
     <input type="text" name="author" value="<%= @message && @message.author %>">
   </div>
   <div>
     <label>Content:</label>
-    <input type="text" name="content" value="<%= @message && @message.content %>">
+    <br>
+    <textarea name="content" value="<%= @message && @message.content %>" style="height:200px"></textarea>
   </div>
   <div>
     <label>Cool Url to Share:</label>
+    <br>
     <input type="text" name="url" value="<%= @message && @message.url %>">
   </div>
   <div>
