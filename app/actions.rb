@@ -4,7 +4,7 @@ get '/' do
 end
 
 get '/messages' do
-  @messages = Message.all
+  @messages = Message.order(created_at: :desc)
   erb :'messages/index'
 end
 
